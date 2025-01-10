@@ -88,3 +88,38 @@ while True:
 
     # update the initial height for the next iteration 
     initial_height = current_height
+
+# list to store the post image urls
+post_urls = []
+
+# loop through the soup elements 
+for soup in soups:
+
+    # find all image elements that match the specific class in soup 
+    elements = soup.find_all('a', class_='x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz _a6hd')
+
+    # extract the href attributes and filter urls that start with "/p/" or "/ree/"
+    post_urls.extend([element['href'] for element in elements if element['href'].startswith(("/bank.repossessedcars/reel/", "/bank.repossessedcars/p/"))])
+
+# convert list to a set to remove duplicates 
+unique_post_urls = list(set(post_urls))
+
+# create a list to store the json for each post 
+json_list = []
+
+# define the query parameters 
+query_parameters = "__a=1&__d=dis"
+
+# go through the urls 
+
+# error handling 
+
+    # get the current url of the page 
+
+    # append the query parameters to the current url 
+
+    # get url 
+
+    # wait for a moment to allow new content to load(adjust as needed)
+
+    # find the <pre> tag containing json data 
